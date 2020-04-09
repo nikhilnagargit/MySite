@@ -108,14 +108,20 @@
 <a href="https://www.instagram.com/nikhil._._.nagar/" class="fa fa-instagram"></a>
 <a href="#" class="fa fa-pinterest"></a>
 <a href="#" class="fa fa-yahoo"></a>
-<a href="#" class="fa fa-phone"></a>
+<a href="#"id='myids' class="fa fa-phone"></a>
 <a href="#" class="fa fa-reddit"></a>
 </div>
 
 </div>
 
-<script type="text/javascript">
-	$(window).load()
+<script>
+$(document).ready(function () {
+
+    $("#myids").click(function () {
+
+            $("#myids").text(($("#myids").text() == '') ? '9079641301' : '');
+    })
+});
 
 </script>
 
