@@ -1,0 +1,59 @@
+{% extends "portfolio/base.html" %}
+
+{% block content %}
+
+
+
+
+
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Gallary
+      <small>My other aspects than programming</small> 
+      <a href="#">
+      <button class='btn btn-outline-primary'>Add Photo</button></a>
+    </h1>
+
+    <div class="breadcrumb">
+  
+    </div>
+
+
+
+     <div class="container">
+
+
+    <div class="row">
+
+
+    {% for postcard in object_list %}
+
+       <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{{postcard.photo.url }}" alt="xxxxxxx">
+          <div class="card-body">
+            <h5 class="card-title">{{postcard.title}}</h5>
+         
+            <p class="card-text">{{postcard.description|truncatechars:20}}</p>
+          </div>
+   
+        </div>
+      </div>
+    {% endfor %}
+     
+    
+
+
+       
+     </div>
+
+    </div>
+
+    <!-- /.row -->
+
+
+
+
+
+
+{% endblock content  %}
