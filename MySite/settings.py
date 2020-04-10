@@ -131,3 +131,4 @@ CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+

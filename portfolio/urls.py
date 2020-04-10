@@ -1,7 +1,7 @@
-from django.urls import path
-from django.conf import include
+from django.urls import path,include
+
 from . import views
-from django.contrib.auth import views as auth_views
+
 app_name = 'portfolio'
 urlpatterns = [
   
@@ -9,10 +9,12 @@ urlpatterns = [
        path('projects/',views.projectview,name='projects'),
        path('contact/',views.contactview,name = 'contacts'),
        path('photocards/',views.PhotocardListView.as_view(),name ='photocardlist'),
+       path('projects/',include('django.contrib.auth.urls')),
+       path('projects/new',views.ProjectCreateView.as_view(),name ='projectcreate'),
 
 
           
 
 
 ]
- 
+  

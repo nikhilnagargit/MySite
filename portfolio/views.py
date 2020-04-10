@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from . import models 
 from  django.views.generic import ListView,DetailView,CreateView,DetailView,UpdateView
-from django.urls import reverse_lazy
+from django.urls import reverse
 # Create your views here.
 def aboutview(request):
 	return( render(request,'portfolio/about.html'))
@@ -12,8 +12,10 @@ def projectview(request):
 	context['certificates']=models.Certificate.objects.all()
 	return( render(request,'portfolio/projects.html',context))
 
-def ProjectCreateView(CreateView):
+class ProjectCreateView(CreateView):
 	model = models.Project
+	fields = '__all__'
+
 	 
 
 
