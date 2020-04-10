@@ -7,7 +7,10 @@ def aboutview(request):
 	return( render(request,'portfolio/about.html'))
 
 def projectview(request):
-	return( render(request,'portfolio/projects.html'))
+	context = {}
+	context['projects'] = models.Project.objects.all()
+	context['certificates']=models.Certificate.objects.all()
+	return( render(request,'portfolio/projects.html',context))
 
 
 def contactview(request):

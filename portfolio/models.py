@@ -17,7 +17,15 @@ class Photocard(models.Model):
 		img.save(self.photo.path)
 
 
+class Project(models.Model):
+	name = models.CharField(max_length=70)
+	description = models.CharField(max_length=10000,blank=True)
+	githublink = models.URLField(max_length=1000,blank=True)
+	videolink = models.URLField(max_length=1000,blank=True)
+	image = models.ImageField(upload_to='projectimages',default='projectimages/defaultproject.jpg')
+	technologystack = models.CharField(max_length=5000,blank=True)
 
-
-
+class Certificate(models.Model):
+	title = models.CharField(max_length=70)
+	image = models.URLField(max_length=10000)
 
