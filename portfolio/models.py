@@ -27,5 +27,5 @@ class Project(models.Model):
 
 class Certificate(models.Model):
 	title = models.CharField(max_length=70)
-	image = models.URLField(max_length=10000)
+	gdrivelink = models.URLField(max_length=10000)
 

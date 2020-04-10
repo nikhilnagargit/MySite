@@ -12,6 +12,10 @@ def projectview(request):
 	context['certificates']=models.Certificate.objects.all()
 	return( render(request,'portfolio/projects.html',context))
 
+def ProjectCreateView(CreateView):
+	model = models.Project
+	 
+
 
 def contactview(request):
 	return( render(request,'portfolio/contacts.html'))
@@ -19,7 +23,7 @@ def contactview(request):
 class PhotocardListView(ListView) :
 	model = models.Photocard
 
-	
+
 
 
 

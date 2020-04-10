@@ -2,7 +2,19 @@
 
 {% block content %}
 
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+$('.thumbnailview').each(function(index){
+      this.src = (this.src).replace('open','thumbnail');
 
+
+
+});
+
+    });
+
+</script>
 <style type="text/css">
 	section.pricing {
   background: #007bff;
@@ -170,8 +182,8 @@
             <h5 class="card-title text-muted text-uppercase text-center">My Certificate</h5>
             <h6 class="card-price text-center">{{certificate.title}}</h6>
             <hr>
-            <img style="max-height:100%;max-width: 100%; " class="mb-3" src="{{ certificate.image }}">
-            <a id="imagefull" href="" class="btn btn-block btn-primary text-uppercase">Full View</a>
+            <img  style="max-height:100%;max-width: 100%; " class="mb-3 thumbnailview" src="{{ certificate.gdrivelink }}">
+            <a href="{{ certificate.gdrivelink }}" class="btn btn-block btn-primary text-uppercase">Full View</a>
           </div>
         </div>
       </div>
