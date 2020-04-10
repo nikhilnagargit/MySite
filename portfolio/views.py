@@ -2,7 +2,9 @@ from django.shortcuts import render
 from . import models 
 from  django.views.generic import ListView,DetailView,CreateView,DetailView,UpdateView
 from django.urls import reverse
+from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
+
 def aboutview(request):
 	return( render(request,'portfolio/about.html'))
 

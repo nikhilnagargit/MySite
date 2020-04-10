@@ -27,7 +27,7 @@ class Project(models.Model):
 	technologystack = models.CharField(max_length=5000,blank=True)
 
 	def get_absolute_url(self):
-		return '/portfolio/projects'
+		return '/portfolio/projects/'
 
 class Certificate(models.Model):
 	title = models.CharField(max_length=70)

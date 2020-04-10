@@ -48,7 +48,14 @@
 					<li class="nav-item mx-3">
 						<a class="nav-link" href="{% url 'portfolio:photocardlist' %}">Gallary</a>
 					</li>
+					{% if user.is_authenticated %}
+					    <li class="nav-item mx-3">
+						<a class="nav-link" href="/portfolio/projects/logout/">Logout</a>
+					</li>
 				
+					
+					{% endif %}
+						
 	
 				</ul>
 

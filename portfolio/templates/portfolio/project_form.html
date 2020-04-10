@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-		New Project
-	</title>
-</head>
-<body>
+{% extends "portfolio/base.html" %}
 
-	<form method="Post" >
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+
+<div class="container w-50 border border-primary p-3" > 
+
+	<form method="Post">
 		{% csrf_token %}
-		{{ form.as_p }}
+		{{ form|crispy }}
 
 
 		<input type="submit" name="" value = "submit">
 	</form>
+</div>
 
-</body>
-</html>
+{% endblock content  %}
