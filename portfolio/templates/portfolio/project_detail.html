@@ -1,0 +1,109 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block content %}
+
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+		
+	let s = $('iframe').attr('src');
+		s = s.replace('https://www.youtube.com/watch?v=','');
+		s = s.replace('https://youtu.be/','');
+		console.log(s)
+		s = "https://www.youtube.com/embed/" + s
+
+		$('iframe').attr('src',s) ;
+		
+	});
+</script>
+
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    
+      <div class="h4 " style="display: inline-block;">My Project </div>
+ <h1 class="mt-4 mb-3" style="display: inline-block;" >{{ object.name }}
+    </h1>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'portfolio:projects' %}">Projects</a>
+      </li>
+      <li class="breadcrumb-item active">{{object.name}}</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-fluid rounded mb-4" src="{{ object.image.url }}" alt="">
+      </div>
+      <div class="col-lg-6">
+        <h2>About {{object.name}}</h2>
+        <p>{{ object.description }}</p>
+     
+      </div>
+    </div>
+    <!-- /.row -->
+
+
+    <h2>Code and Files</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+         <a href="{{object.githublink}}">
+          <div class="card-body">
+          	           
+            <svg class="bi bi-file-earmark-code" width="13em" height="13em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 1h5v1H4a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V6h1v7a2 2 0 01-2 2H4a2 2 0 01-2-2V3a2 2 0 012-2z"/>
+  <path d="M9 4.5V1l5 5h-3.5A1.5 1.5 0 019 4.5z"/>
+  <path fill-rule="evenodd" d="M8.646 6.646a.5.5 0 01.708 0l2 2a.5.5 0 010 .708l-2 2a.5.5 0 01-.708-.708L10.293 9 8.646 7.354a.5.5 0 010-.708zm-1.292 0a.5.5 0 00-.708 0l-2 2a.5.5 0 000 .708l2 2a.5.5 0 00.708-.708L5.707 9l1.647-1.646a.5.5 0 000-.708z" clip-rule="evenodd"/>
+</svg>
+
+<div class="card-footer" >
+	<h2>GitHub Link</h2>
+</div>
+</a>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="col-lg-8 mb-4">
+        <div class="card h-100 text-center">
+          <iframe width="750" height="450" src="{{ object.videolink }}" frameborder="0" allow="accelerometer; autoplay; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     
+ 
+        </div>
+      </div>
+     
+    </div>
+    <!-- /.row -->
+
+    <!-- Our Customers -->
+    <h2>The Team </h2>
+    <div class="row">
+      <div class="col-lg-2 col-sm-4 mb-4">
+        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+      </div>
+      <div class="col-lg-2 col-sm-4 mb-4">
+        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+      </div>
+      <div class="col-lg-2 col-sm-4 mb-4">
+        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+      </div>
+      <div class="col-lg-2 col-sm-4 mb-4">
+        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+      </div>
+      <div class="col-lg-2 col-sm-4 mb-4">
+        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+      </div>
+      <div class="col-lg-2 col-sm-4 mb-4">
+        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+      </div>
+    </div>
+    <!-- /.row -->
+
+  </div>
+
+
+{% endblock content  %}

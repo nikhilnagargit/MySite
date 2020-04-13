@@ -23,8 +23,8 @@ class Project(models.Model):
 	description = models.CharField(max_length=10000,blank=True)
 	githublink = models.URLField(max_length=1000,blank=True)
 	videolink = models.URLField(max_length=1000,blank=True)
-	image = models.ImageField(upload_to='projectimages',default='projectimages/defaultproject.jpg')
-	technologystack = models.CharField(max_length=5000,blank=True)
+	image = models.ImageField(upload_to='projectimages',blank=True)
+	technologystack = models.CharField(max_length=5000,blank=True)	
 
 	def get_absolute_url(self):
 		return '/portfolio/projects/'
@@ -32,4 +32,7 @@ class Project(models.Model):
 class Certificate(models.Model):
 	title = models.CharField(max_length=70)
 	gdrivelink = models.URLField(max_length=10000)
+
+	def get_absolute_url(self):
+		return '/portfolio/projects/'
 

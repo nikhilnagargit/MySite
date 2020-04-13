@@ -42,7 +42,7 @@ $('.thumbnailview').each(function(index){
 }
 
 .pricing .card-price {
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin: 0;
 }
 
@@ -75,6 +75,10 @@ $('.thumbnailview').each(function(index){
 
 
 
+ }
+
+ .card-body{
+  min-height: 30rem;
  }
 
 
@@ -144,8 +148,16 @@ $('.thumbnailview').each(function(index){
 
        <div class="col-lg-4 mb-5 ">
         <div class="card mb-5 mb-lg-0">
-          <div class="card-body ">
-            <h5 class="card-title text-muted text-uppercase text-center">My Project</h5>
+          <div class="card-body  " style="position:relative;">
+            <div>
+            <h5 style="display: inline-block;" class="card-title text-muted text-uppercase text-center">My Project</h5>
+            <a style="float:right" href="{% url 'portfolio:deleteproject' project.id %}" ><svg class="bi bi-x-circle" width="2em" height="2em" fill = 'currentcolor' viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z" clip-rule="evenodd"/>
+</svg></a>
+
+            </div>
             <h1 class="card-price text-center">{{project.name}}</h1>
             <hr>
             <ul class="fa-ul">
@@ -155,7 +167,7 @@ $('.thumbnailview').each(function(index){
               	<span class="h5">Description :</span><br><span class="text-muted">{{ project.description|truncatechars:150 }}</span></li>
              
             </ul>
-            <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+            <a href="{% url 'portfolio:projectdetail' project.id  %}" style="position: absolute;bottom: 1rem ; left:1rem; width: 90%" class="btn btn-block btn-primary text-uppercase">Project Details</a>
           </div>
         </div>
       </div>
@@ -167,10 +179,19 @@ $('.thumbnailview').each(function(index){
 
 
     </div>
-    <div class="mx-5 breadcrumb">
-<div class="breadcrumb-item">NikhilNagar/Certificates</div>
-</div>
 
+
+
+
+<div class="mx-5 breadcrumb">
+ <div class="container-fluid" style="overflow:hidden; ">
+  <div class="float-left mx-5"><h2>Certificates</h2></div>
+  <div class="float-right mx-5"> <a class="btn  btn-outline-primary" href=" {% url 'portfolio:certificatecreate' %}" >Add Certificates</a></div>
+
+ 
+
+</div>
+</div>
 
 
 
@@ -186,12 +207,17 @@ $('.thumbnailview').each(function(index){
 
        <div class="col-lg-4 mb-5 ">
         <div class="cardc card mb-5 mb-lg-0">
-          <div class="card-body">
-            <h5 class="card-title text-muted text-uppercase text-center">My Certificate</h5>
+          <div class="card-body" style="position: relative">
+            <h5 class="card-title text-muted text-uppercase text-center" style="display: inline-block;">My Certificate</h5>
+            <a style="float:right" style="float: right;" href="{% url 'portfolio:deletecertificate' certificate.id %}" ><svg class="bi bi-x-circle" width="2em" height="2em" fill = 'currentcolor' viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z" clip-rule="evenodd"/>
+</svg></a>
             <h6 class="card-price text-center">{{certificate.title}}</h6>
             <hr>
             <img  style="max-height:100%;max-width: 100%; " class="mb-3 thumbnailview" src="{{ certificate.gdrivelink }}">
-            <a href="{{ certificate.gdrivelink }}" class="btn btn-block btn-primary text-uppercase">Full View</a>
+            <a href="{{ certificate.gdrivelink }}" class="btn btn-block btn-primary text-uppercase" style="position: absolute;bottom: 1rem ; left:1rem; width: 90%" >Full View</a>
           </div>
         </div>
       </div>

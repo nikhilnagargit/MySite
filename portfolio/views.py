@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from . import models 
-from  django.views.generic import ListView,DetailView,CreateView,DetailView,UpdateView
-from django.urls import reverse
+from  django.views.generic import ListView,DetailView,CreateView,DeleteView,UpdateView
+from django.urls import reverse, reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
@@ -18,7 +18,21 @@ class ProjectCreateView(CreateView):
 	model = models.Project
 	fields = '__all__'
 
-	 
+class ProjectDetailView(DetailView):
+	model = models.Project
+
+class ProjectDeleteView(DeleteView):
+	model = models.Project
+	success_url = reverse_lazy('portfolio:projects')
+
+class CertificateCreateView(CreateView):
+	model = models.Certificate
+	fields='__all__'
+
+class CertificateDeleteView(DeleteView):
+	model = models.Certificate
+	success_url= reverse_lazy('portfolio:projects')
+	template_name = 'portfolio/project_confirm_delete.html'
 
 
 def contactview(request):
