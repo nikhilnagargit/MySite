@@ -1,0 +1,12 @@
+{% extends "portfolio/base.html" %}
+
+{% block content %}
+    	
+<form method = 'post'>
+	{% csrf_token %}
+	<h2 style ="display:inline-block;" >Are you sure want to delete that photocard.</h2>
+	<input  type="submit" style='float:centre;' value="confirm" class="btn btn-outline-danger btn-danger my-5 " name="">
+	<a href="{% url 'portfolio:photocardlist' %}"><input type="" value="Cancle" class="btn btn-outline-warning btn-warning " name=""></a>
+</form>
+
+{% endblock content %}	

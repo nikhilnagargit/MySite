@@ -4,8 +4,9 @@
     	
 <form method = 'post'>
 	{% csrf_token %}
-	<p>Are you sure want to delete that project.</p>
-	<input type="submit" value="confirm" class="btn btn-outline-danger btn-danger" name="">
+	<h2 style ="display:inline-block;" >Are you sure want to delete that photocard.</h2>
+	<input  type="submit" style='float:centre;' value="confirm" class="btn btn-outline-danger btn-danger my-5 " name="">
+	<a href="{% url 'portfolio:projects' %}"><input type="" value="Cancle" class="btn btn-outline-warning btn-warning " name=""></a>
 </form>
 
 {% endblock content %}	

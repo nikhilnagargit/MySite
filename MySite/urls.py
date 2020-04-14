@@ -26,6 +26,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.homeview,name='home'),
     path('portfolio/',include('portfolio.urls')),
+    path('accounts/',include('django.contrib.auth.urls')),
+
 
 ]
 urlpatterns += staticfiles_urlpatterns()

@@ -14,25 +14,25 @@ def projectview(request):
 	context['certificates']=models.Certificate.objects.all()
 	return( render(request,'portfolio/projects.html',context))
 
-class ProjectCreateView(CreateView):
+class ProjectCreateView(LoginRequiredMixin,CreateView):
 	model = models.Project
 	fields = '__all__'
 
 class ProjectDetailView(DetailView):
 	model = models.Project
 
-class ProjectDeleteView(DeleteView):
+class ProjectDeleteView(LoginRequiredMixin,DeleteView):
 	model = models.Project
 	success_url = reverse_lazy('portfolio:projects')
 
-class CertificateCreateView(CreateView):
+class CertificateCreateView(LoginRequiredMixin,CreateView):
 	model = models.Certificate
 	fields='__all__'
 
-class CertificateDeleteView(DeleteView):
+class CertificateDeleteView(LoginRequiredMixin,DeleteView):
 	model = models.Certificate
 	success_url= reverse_lazy('portfolio:projects')
-	template_name = 'portfolio/project_confirm_delete.html'
+
 
 
 def contactview(request):
@@ -41,9 +41,14 @@ def contactview(request):
 class PhotocardListView(ListView) :
 	model = models.Photocard
 
+class PhotocardCreateView(LoginRequiredMixin,CreateView):
+	model = models.Photocard
+	fields = '__all__'
 
 
-
+class PhotocardDeleteView(LoginRequiredMixin,DeleteView):
+	model = models.Photocard
+	success_url = reverse_lazy('portfolio:photocardlist')
 
 
 
