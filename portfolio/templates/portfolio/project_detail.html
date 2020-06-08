@@ -34,11 +34,11 @@
     <!-- Intro Content -->
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-fluid rounded mb-4" src="{{ object.image.url }}" alt="">
+        <img class="img-fluid rounded mb-4" src="{{object.image.url}}" alt="">
       </div>
       <div class="col-lg-6">
         <h2>About {{object.name}}</h2>
-        <p>{{ object.description }}</p>
+        <h5>{{ object.description }}</h5>
      
       </div>
     </div>
@@ -46,6 +46,7 @@
 
 
     <h2>Code and Files</h2>
+    <hr>
 
     <div class="row">
       <div class="col-lg-4 mb-4">
@@ -80,27 +81,14 @@
     <!-- /.row -->
 
     <!-- Our Customers -->
-    <h2>The Team </h2>
-    <div class="row">
-      <div class="col-lg-2 col-sm-4 mb-4">
-        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-      </div>
-      <div class="col-lg-2 col-sm-4 mb-4">
-        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-      </div>
-      <div class="col-lg-2 col-sm-4 mb-4">
-        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-      </div>
-      <div class="col-lg-2 col-sm-4 mb-4">
-        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-      </div>
-      <div class="col-lg-2 col-sm-4 mb-4">
-        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-      </div>
-      <div class="col-lg-2 col-sm-4 mb-4">
-        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-      </div>
-    </div>
+<hr>
+    <h2>Go to the Live Project </h2>
+    <a style="color:rgb(48, 51, 184);" class="h4" href="{{ object.projectlink }}">Click Here</a>
+    <hr>
+    <h2>The Tools </h2>
+    <h4 style="color: blueviolet;">{{object.technologystack}}</h4>
+
+
     <!-- /.row -->
 
   </div>

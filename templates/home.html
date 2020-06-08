@@ -4,34 +4,37 @@
 <html>
 
 <head>
-	<title>HomePage</title>
+  <title>HomePage</title>
 
-	  <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
 
 </head>
 
 <header>
 
-<nav class="navbar  navbar-expand-lg navbar-light bg-light fixed-top text-center">
+  <nav class="navbar  navbar-expand-lg navbar-light bg-light fixed-top text-center">
 
-	<div class="container-fluid" >
-		<a class="navbar-brand " href="index.html" style="font-size:35px !important;font-weight:bold !important; ">  
-		 <svg class="bi mr-2 bi-pentagon-half" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M8 1.288V15h4.267l2.575-8.153L8 1.288zM16 6.5L8 0 0 6.5 3 16h10l3-9.5z" clip-rule="evenodd"/>
-</svg>
- nikhilnagar.com
-</a>
-<h3>Note : This web app is under development process...</h3>
+    <div class="container-fluid">
+      <a class="navbar-brand " href="#" style="font-size:35px !important;font-weight:bold !important; ">
+        <svg class="bi mr-2 bi-pentagon-half" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 1.288V15h4.267l2.575-8.153L8 1.288zM16 6.5L8 0 0 6.5 3 16h10l3-9.5z"
+            clip-rule="evenodd" />
+        </svg>
+        nikhilnagar.com
+      </a>
+      <h3>Note : This web app is under development process...</h3>
 
-	</div>
-	
- 
+    </div>
 
-      
- 
+
+
+
+
     </div>
   </nav>
 </header>
@@ -41,42 +44,49 @@
 
 
 
- 
-    <div class=" w-100 " style="position: absolute;">
-    	<div class="row text-center"  >
-    		  <div class="container text-center" style="position: sticky;top:10%; color:white; font-size:30px;">
-    			Choose an appropriate option below.<br>
-    			<svg class="bi bi-arrow-bar-down" width="4em" height="4em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M11.354 10.146a.5.5 0 010 .708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 01.708-.708L8 12.793l2.646-2.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
-  <path fill-rule="evenodd" d="M8 6a.5.5 0 01.5.5V13a.5.5 0 01-1 0V6.5A.5.5 0 018 6zM2 3.5a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
-</svg>
-           </div>
 
-               <img class=" w-100" src="{% static 'images/a.jpg'  %}" >
-              <div class="container " style="position: sticky;bottom:30% ">
-              <div class='row'>
-          
-              
-              
-                    <div class="col-md-6 my-3" style="color:white;">
-                    	<a href="{% url 'portfolio:about' %} ">
-                       <button  type="button" class="btn btn-primary btn-lg " style="font-weight: bold ; font-size:30px;">Recruiters/Developers</button>
-                       </a>
-                    </div>
-                    
-                       <div class="col-md-6 my-3" style="color:white;">
-                       	<a href="#">
-                         <button type="button" class="btn btn-primary btn " style="font-weight: bold;font-size:30px;">Friends/Family</button>
-                                 </a>
-                       </div>
-            
-             </div>
+  <div class=" w-100 " style="position: absolute;">
+    <div class="row text-center">
+      <div class="container text-center" style="position: sticky;top:10%; color:white; font-size:30px;">
+        Choose an appropriate option below.<br>
+        <svg class="bi bi-arrow-bar-down" width="4em" height="4em" viewBox="0 0 16 16" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M11.354 10.146a.5.5 0 010 .708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 01.708-.708L8 12.793l2.646-2.647a.5.5 0 01.708 0z"
+            clip-rule="evenodd" />
+          <path fill-rule="evenodd"
+            d="M8 6a.5.5 0 01.5.5V13a.5.5 0 01-1 0V6.5A.5.5 0 018 6zM2 3.5a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5z"
+            clip-rule="evenodd" />
+        </svg>
+      </div>
+
+      <img class=" w-100" src="{% static 'images/a.jpg'  %}">
+      <div class="container " style="position: sticky;bottom:30% ">
+        <div class='row'>
+
+
+
+          <div class="col-md-6 my-3" style="color:white;">
+            <a href="{% url 'portfolio:about' %} ">
+              <button type="button" class="btn btn-primary btn-lg "
+                style="font-weight: bold ; font-size:30px;">Recruiters/Developers</button>
+            </a>
+          </div>
+
+          <div class="col-md-6 my-3" style="color:white;">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn "
+                style="font-weight: bold;font-size:30px;">Friends/Family</button>
+            </a>
+          </div>
+
         </div>
-        
-     </div>
+      </div>
+
+    </div>
 
 
-<!-- 
+    <!-- 
 <div class="container">
   <img src="{% static 'images/a.jpg'  %}" alt="Snow" style="width:100%;">
   <div class="bottom-left">Bottom Left</div>
@@ -88,12 +98,18 @@
  -->
 
 
- 
 
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
 
 
 </body>

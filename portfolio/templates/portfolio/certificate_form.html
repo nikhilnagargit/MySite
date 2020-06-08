@@ -1,19 +1,12 @@
-{% extends "portfolio/base.html" %}
-
-{% block content %}
-
+{% extends "portfolio/base.html" %} {% block content %}
 {% load crispy_forms_tags %}
 
+<div class="container w-50 border border-primary p-3">
+  <form method="Post" enctype="multipart/form-data">
+    {% csrf_token %} {{ form|crispy }}
 
-<div class="container w-50 border border-primary p-3" > 
-
-	<form method="Post">
-		{% csrf_token %}
-		{{ form|crispy }}
-
-
-		<input type="submit" name="" value = "submit">
-	</form>
+    <input type="submit" name="" value="submit" />
+  </form>
 </div>
 
-{% endblock content  %}
+{% endblock content %}
